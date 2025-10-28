@@ -69,89 +69,8 @@ Live Demo: https://acheronx0577.github.io/JavaScript-Building-Football-Team-Card
 git clone git@github.com:acheronx0577/JavaScript-Building-Football-Team-Cards.git
 ```
 
-### 2️⃣ Open the project folder
-```
-cd JavaScript-Building-Football-Team-Cards
-```
-
-### 3️⃣ Run the file
+### 2️⃣ Run the file
 Just open `index.html` in your favorite browser 🌐 and start playing!
-
----
-
-## 🎮 How to Use
-
-### Team Navigation:
-- **🏠 Default View**: See all 24 players with their positions and numbers
-- **🎯 Filter by Position**: Use dropdown to view Forwards, Midfielders, Defenders, or Goalkeepers
-- **💬 Nickname Filter**: Show only players who have nicknames
-- **⭐ Captain**: Diego Maradona is highlighted as team captain
-
-### Player Information:
-- **Player Name** with captain designation
-- **Position** on the field
-- **Jersey Number** in prominent badge
-- **Nickname** (if available) with special styling
-
----
-
-## 🛠️ Technical Features
-
-- **Modern JavaScript ES6+** (destructuring, arrow functions, template literals)
-- **Array Methods** (`map()`, `filter()`, `forEach()`)
-- **DOM Manipulation** for dynamic content rendering
-- **Event Handling** for filter interactions
-- **CSS Grid & Flexbox** for responsive layouts
-- **CSS Custom Properties** for consistent theming
-- **Object.freeze()** for data immutability
-
----
-
-## 👥 Legendary 1986 Argentina Squad
-
-### 🥅 Goalkeepers (3)
-- Luis Islas (#15) - "El loco"
-- Nery Pumpido (#18)
-- Héctor Zelada (#22)
-
-### 🛡️ Defenders (7)
-- José Luis Brown (#5) - "Tata"
-- Daniel Passarella (#6) - "El Gran Capitán"
-- Néstor Clausen (#8)
-- José Luis Cuciuffo (#9) - "El Cuchu"
-- Oscar Garré (#13)
-- Julio Olarticoechea (#16)
-- Oscar Ruggeri (#19) - "El Cabezón"
-
-### ⚡ Midfielders (8)
-- Sergio Batista (#2)
-- Ricardo Bochini (#3) - "El Bocha"
-- Claudio Borghi (#4) - "Bichi"
-- ⭐ Diego Maradona (#10) - Captain - "El Pibe de Oro"
-- Héctor Enrique (#12)
-- Ricardo Giusti (#14)
-- Carlos Tapia (#20)
-- Marcelo Trobbiani (#21) - "Calesita"
-
-### 🎯 Forwards (6)
-- Sergio Almirón (#1)
-- Jorge Burruchaga (#7) - "Burru"
-- Jorge Valdano (#11) - "The Philosopher of Football"
-- Pedro Pasculli (#17)
-- Gabriel Calderón (#23) - "El Gaby"
-- Roberto Mouzo (#24) - "El Negro"
-
----
-
-## 💡 Learning Objectives
-
-This project demonstrates:
-- **JavaScript Array Manipulation** with real-world data
-- **Dynamic DOM Content Generation** from JavaScript objects
-- **Event-Driven Filtering Systems**
-- **Modern CSS Layout Techniques** (Grid, Flexbox)
-- **Data Structure Design** for complex applications
-- **Responsive Web Design Principles**
 
 ---
 
@@ -182,14 +101,3 @@ This project is open-source under the **MIT License**.
 ---
 
 ⭐ **If you enjoy this music player, don't forget to give it a star!** ⭐
-
----
-
-## 🔗 Related Projects
-
-Check out my other freeCodeCamp certification projects:
-- [🎵 Modern Music Player](https://github.com/acheronx0577/JavaScript-Building-a-Music-Player)
-- [🎮 Rock Paper Scissors](https://github.com/acheronx0577/JavaScript-Building-a-Rock-Paper-Scissors-Game)
-- [🏆 Full Certification Portfolio](https://github.com/acheronx0577/JavaScript-Algorithms-and-data-structures)
-
----
