@@ -52,16 +52,6 @@ Live Demo: https://acheronx0577.github.io/JavaScript-Building-Football-Team-Card
 
 ---
 
-## 🧩 Project Files
-
-| File | Description |
-|------|-------------|
-| `index.html` | Team cards layout and structure |
-| `script.js` | Team data management and filtering logic ⚙️ |
-| `styles.css` | Modern football-themed styling 🎨 |
-
----
-
 ## 🧰 Installation & Usage
 
 ### 1️⃣ Clone this repo
