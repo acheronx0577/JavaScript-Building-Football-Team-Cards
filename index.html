@@ -1,77 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL_TEAM_TERMINAL</title>
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Argentina 1986 World Cup Team</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">FOOTBALL_TEAM_TERMINAL</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
 
-  <body>
-    <header>
-      <div class="header-content">
-        <h1 class="title">Argentina 1986 World Cup Team</h1>
-        <div class="team-badge">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSIjNzVCNEY0IiBkPSJNMCAwaDEwMHYxMDBIMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAzM2gxMDB2MzRIMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNDIgNDloMTZ2Mkg0MnoiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIxNSIgZmlsbD0iI0ZDMCIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEyIiBmaWxsPSIjM0E2RkM1Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTUwIDQybC0yIDZoLTRsMyA1LTIgNiA0LTQgNCA0LTItNiAzLTVoLTQuMDAyTDUwIDQyeiIvPjwvc3ZnPg==" alt="Argentina Flag" />
-        </div>
-      </div>
-    </header>
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/network/worldcup_teams/argentina_1986</h1>
+                <div class="status-bar">
+                    <span class="status-item">CHAMPIONS</span>
+                    <span class="status-item">v1.0.0</span>
+                    <span class="status-item">DATA_LOADED</span>
+                </div>
+            </div>
 
-    <main>
-      <section class="team-info">
-        <div class="team-stats">
-          <div class="stat-card">
-            <h3>Team</h3>
-            <p id="team">Argentina</p>
-          </div>
-          <div class="stat-card">
-            <h3>Sport</h3>
-            <p id="sport">Football</p>
-          </div>
-          <div class="stat-card">
-            <h3>Year</h3>
-            <p id="year">1986</p>
-          </div>
-          <div class="stat-card">
-            <h3>Head Coach</h3>
-            <p id="head-coach">Carlos Bilardo</p>
-          </div>
-          <div class="stat-card">
-            <h3>World Cup</h3>
-            <p>Winners</p>
-          </div>
-        </div>
-      </section>
+            <div class="language-selector">
+                <span class="selector-label">LANGUAGE:</span>
+                <select id="language-select" class="terminal-select" onchange="changeLanguage(this.value)">
+                    <option value="en">ENGLISH</option>
+                    <option value="es">ESPAÑOL</option>
+                    <option value="fr">FRANÇAIS</option>
+                </select>
+            </div>
 
-      <section class="players-section">
-        <div class="section-header">
-          <h2>Team Players</h2>
-          <div class="filter-controls">
-            <label class="options-label" for="players">Filter Players:</label>
-            <select name="players" id="players">
-              <option value="all">All Players</option>
-              <option value="nickname">With Nicknames</option>
-              <option value="forward">Forwards</option>
-              <option value="midfielder">Midfielders</option>
-              <option value="defender">Defenders</option>
-              <option value="goalkeeper">Goalkeepers</option>
-            </select>
-          </div>
-        </div>
+            <div class="stats-panel">
+                <div class="stats-header">
+                    <span class="stats-title">TEAM_STATS</span>
+                </div>
+                <div class="stats-content">
+                    <div class="stat-item">
+                        <div class="stat-value" id="team-name">ARGENTINA</div>
+                        <div class="stat-label">TEAM</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="sport-type">FOOTBALL</div>
+                        <div class="stat-label">SPORT</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="worldcup-year">1986</div>
+                        <div class="stat-label">YEAR</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="head-coach">C.BILARDO</div>
+                        <div class="stat-label">COACH</div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="cards" id="player-cards">
-          <!-- Player cards will be generated by JavaScript -->
-        </div>
-      </section>
-    </main>
+            <div class="controls-section">
+                <input
+                    type="text"
+                    id="player-search"
+                    class="search-box"
+                    placeholder="FILTER_PLAYERS [name/position...]"
+                />
+                <select id="position-filter" class="terminal-select">
+                    <option value="all">ALL_POSITIONS</option>
+                    <option value="forward">FORWARDS</option>
+                    <option value="midfielder">MIDFIELDERS</option>
+                    <option value="defender">DEFENDERS</option>
+                    <option value="goalkeeper">GOALKEEPERS</option>
+                    <option value="nickname">WITH_NICKNAMES</option>
+                </select>
+            </div>
 
-    <footer>
-      <p>&copy; 2023 Football Team Stats | Inspired by freeCodeCamp</p>
-    </footer>
+            <div id="players-container" class="players-container">
+                <div id="player-grid" class="players-grid">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <div>LOADING_TEAM_DATA...</div>
+                    </div>
+                </div>
+            </div>
 
+            <div id="error-container" class="error-msg hide"></div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">WORLD_CUP: WINNERS</span>
+                <span class="stat">MATCHES: 7</span>
+                <span class="stat">PLAYERS: <span id="total-players">0</span></span>
+                <span class="stat">DISPLAYED: <span id="displayed-players">0</span></span>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function changeLanguage(lang) {
+            window.location.href = lang + '.html';
+        }
+    </script>
     <script src="./script.js"></script>
-  </body>
-
+</body>
 </html>
