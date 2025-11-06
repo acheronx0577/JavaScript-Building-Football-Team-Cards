@@ -20,7 +20,7 @@ This repository contains the complete portfolio of projects needed to demonstrat
 
 ## 📸 Project Preview
 
-<img width="1369" height="1262" alt="image" src="https://github.com/user-attachments/assets/3a98df37-eecd-429a-9dfb-0cf8725123bd" />
+<img width="1487" height="1296" alt="Screenshot 2025-11-05 204346" src="https://github.com/user-attachments/assets/66b66ad3-a612-4bdc-9838-e17b009eb927" />
 
 Live Demo: https://acheronx0577.github.io/JavaScript-Building-Football-Team-Cards
 
