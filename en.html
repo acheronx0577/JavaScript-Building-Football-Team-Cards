@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL_TEAM_TERMINAL - ENGLISH</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">></span>
+                <span class="title">FOOTBALL_TEAM_TERMINAL - ENGLISH</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/network/worldcup_teams/argentina_1986</h1>
+                <div class="status-bar">
+                    <span class="status-item">CHAMPIONS</span>
+                    <span class="status-item">v1.0.0</span>
+                    <span class="status-item">ENGLISH_MODE</span>
+                </div>
+            </div>
+
+            <div class="language-selector">
+                <span class="selector-label">LANGUAGE:</span>
+                <select id="language-select" class="terminal-select" onchange="changeLanguage(this.value)">
+                    <option value="en" selected>ENGLISH</option>
+                    <option value="es">ESPAÑOL</option>
+                    <option value="fr">FRANÇAIS</option>
+                </select>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stats-header">
+                    <span class="stats-title">TEAM_STATS</span>
+                </div>
+                <div class="stats-content">
+                    <div class="stat-item">
+                        <div class="stat-value" id="team-name">ARGENTINA</div>
+                        <div class="stat-label">TEAM</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="sport-type">FOOTBALL</div>
+                        <div class="stat-label">SPORT</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="worldcup-year">1986</div>
+                        <div class="stat-label">YEAR</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="head-coach">C.BILARDO</div>
+                        <div class="stat-label">COACH</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <input
+                    type="text"
+                    id="player-search"
+                    class="search-box"
+                    placeholder="FILTER_PLAYERS [name/position...]"
+                />
+                <select id="position-filter" class="terminal-select">
+                    <option value="all">ALL_POSITIONS</option>
+                    <option value="forward">FORWARDS</option>
+                    <option value="midfielder">MIDFIELDERS</option>
+                    <option value="defender">DEFENDERS</option>
+                    <option value="goalkeeper">GOALKEEPERS</option>
+                    <option value="nickname">WITH_NICKNAMES</option>
+                </select>
+            </div>
+
+            <div id="players-container" class="players-container">
+                <div id="player-grid" class="players-grid">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <div>LOADING_TEAM_DATA...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error-container" class="error-msg hide"></div>
+        </main>
+
+        <footer class="terminal-footer">
+            <div class="footer-stats">
+                <span class="stat">WORLD_CUP: WINNERS</span>
+                <span class="stat">MATCHES: 7</span>
+                <span class="stat">PLAYERS: <span id="total-players">0</span></span>
+                <span class="stat">DISPLAYED: <span id="displayed-players">0</span></span>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function changeLanguage(lang) {
+            window.location.href = lang + '.html';
+        }
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
